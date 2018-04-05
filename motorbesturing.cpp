@@ -25,11 +25,21 @@ int main(){
 	
 	while(true){
 		error = 0;
+		int32_t EncoderB = BP.get_motor_encoder(PORT_B);
+		int32_t EncoderC = BP.get_motor_encoder(PORT_C);
 		
 		if(BP.get_sensor(PORT_2, Ultrasonic2) == 0){
 			cout << "Afstand met object: " << Ultrasonic2.cm << "cm" << "\n";
+			int range = Ultrasonic2.cm;
+			if(range > 10){
+				BP.set_motor_power(PORT_B, 127);
+				BP.set_motor_power(PORT_C, 127);
+				sleep(1);
+				BP.set_motor_power(PORT_B, 0);
+				BP.set_motor_power(PORT_B, 0);
+			}
 		}
-		sleep(1);
+		sleep(5);
 	}
 }
 
