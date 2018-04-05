@@ -10,6 +10,12 @@ BrickPi3 BP;
 
 void exit_signal_handler(int signo);
 
+void stop(void){
+	BP.set_motor_power(PORT_B, 0);
+	BP.set_motor_power(PORT_C, 0);
+}
+
+
 int main(){
 	signal(SIGINT, exit_signal_handler);
 	
@@ -20,11 +26,6 @@ int main(){
 	BP.set_sensor_type(PORT_2, SENSOR_TYPE_NXT_ULTRASONIC);
 	BP.offset_motor_encoder(PORT_B, BP.get_motor_encoder(PORT_B));
 	BP.offset_motor_encoder(PORT_C, BP.get_motor_encoder(PORT_C));
-	
-	void stop(void){
-		BP.set_motor_power(PORT_B, 0);
-		BP.set_motor_power(PORT_C, 0);
-	}
 	
 	sensor_ultrasonic_t Ultrasonic2;
 	
