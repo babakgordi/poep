@@ -35,6 +35,12 @@ int main(){
 			if(range > 10){
 				BP.set_motor_power(PORT_B, 127);
 				BP.set_motor_power(PORT_C, 127);
+				usleep(500000);
+			}
+			else{
+				BP.set_motor_power(PORT_B, 0);
+				BP.set_motor_power(PORT_C, 0);
+				usleep(500000);
 			}
 		}
 		sleep(3);
