@@ -15,6 +15,8 @@ int main(){
 	
 	BP.detect();
 	
+	int error;
+	
 	BP.set_sensor_type(PORT_2, SENSOR_TYPE_NXT_ULTRASONIC);
 	BP.offset_motor_encoder(PORT_B, BP.get_motor_encoder(PORT_B));
 	BP.offset_motor_encoder(PORT_C, BP.get_motor_encoder(PORT_C));
