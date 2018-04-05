@@ -30,7 +30,7 @@ int main(){
 		
 		if(BP.get_sensor(PORT_2, Ultrasonic2) == 0){
 			cout << "Afstand met object: " << Ultrasonic2.cm << "cm" << "\n";
-			float range = Ultrasonic2.cm;
+			float range = Ultrasonic2;
 			if(range > 10){
 				BP.set_motor_power(PORT_B, 127);
 				BP.set_motor_power(PORT_C, 127);
