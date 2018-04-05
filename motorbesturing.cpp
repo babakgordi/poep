@@ -29,5 +29,13 @@ int main(){
 		if(BP.get_sensor(PORT_2, Ultrasonic2) == 0){
 			cout << "Afstand met object: " << Ultrasonic2.cm << "cm" << "\n";
 		}
+		sleep(1);
+	}
+}
+
+void exit_signal_handler(int signo){
+	if(signo == SIGINT){
+		BP.reset_all();
+		exit(-2);
 	}
 }
