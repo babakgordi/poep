@@ -21,6 +21,11 @@ int main(){
 	BP.offset_motor_encoder(PORT_B, BP.get_motor_encoder(PORT_B));
 	BP.offset_motor_encoder(PORT_C, BP.get_motor_encoder(PORT_C));
 	
+	void stop(void){
+		BP.set_motor_power(PORT_B, 0);
+		BP.set_motor_power(PORT_C, 0);
+	}
+	
 	sensor_ultrasonic_t Ultrasonic2;
 	
 	while(true){
@@ -36,14 +41,11 @@ int main(){
 				BP.set_motor_power(PORT_B, 127);
 				BP.set_motor_power(PORT_C, 127);
 				usleep(500000);
-			}
-			else{
-				BP.set_motor_power(PORT_B, 0);
-				BP.set_motor_power(PORT_C, 0);
-				usleep(500000);
+				sleep(2);
+				stop();
 			}
 		}
-		sleep(3);
+		sleep(1);
 	}
 }
 
