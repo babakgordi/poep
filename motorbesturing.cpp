@@ -39,14 +39,12 @@ int main(){
 			float range = Ultrasonic2.cm;
 			cout << range;
 			if(range > 10){
-				BP.set_motor_power(PORT_B, 127);
-				BP.set_motor_power(PORT_C, 127);
+				BP.set_motor_position_relative(PORT_B, 360);
+				BP.set_motor_position_relative(PORT_C, 360);
 				usleep(500000);
-				sleep(2);
-				stop();
 			}
 		}
-		sleep(1);
+		sleep(2);
 	}
 }
 
