@@ -10,11 +10,6 @@ BrickPi3 BP;
 
 void exit_signal_handler(int signo);
 
-void stop(void){
-	BP.set_motor_power(PORT_B, 0);
-	BP.set_motor_power(PORT_C, 0);
-}
-
 
 int main(){
 	signal(SIGINT, exit_signal_handler);
@@ -23,14 +18,16 @@ int main(){
 	
 	int error;
 	
-	BP.set_sensor_type(PORT_2, SENSOR_TYPE_NXT_ULTRASONIC);
-	sensor_ultrasonic_t Ultrasonic2;
+	BP.set_sensor_type(PORT_3, SENSOR_TYPE_NXT_ULTRASONIC);
+	sensor_light_t light3;
 	
 	while(true){
 		error = 0;
-		if(BP.get_sensor(PORT_2, Ultrasonic2) == 0){
-			cout << "Afstand met object: " << Ultrasonic2.cm << "cm" << "\n";
+		if(BP.get_sensor(PORT_3, light3) == 0){
+			cout << "lichtreflectie: " << light3.reflected <<  "\n";
+			cout << "licht ambiance: " << light3.ambient << "\n"
 		}
+		sleep(3);
 	}
 }
 
