@@ -18,7 +18,7 @@ int main(){
 	
 	int error;
 	
-	BP.set_sensor_type(PORT_3, SENSOR_TYPE_NXT_ULTRASONIC);
+	BP.set_sensor_type(PORT_3, SENSOR_TYPE_NXT_LIGHT_ON);
 	sensor_light_t light3;
 	
 	while(true){
