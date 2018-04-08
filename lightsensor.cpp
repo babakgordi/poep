@@ -25,7 +25,6 @@ int main(){
 		error = 0;
 		if(BP.get_sensor(PORT_3, light3) == 0){
 			cout << "lichtreflectie: " << light3.reflected <<  "\n";
-			cout << "licht ambiance: " << light3.ambient << "\n";
 		}
 		sleep(3);
 	}
