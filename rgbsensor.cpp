@@ -24,7 +24,7 @@ int main(){
 	while(true){
 		error = 0;
 		if(BP.get_sensor(PORT_1, color1) == 0){
-			cout << "kleurwaard: " << (int) color1.color;
+			cout << "kleurwaarde: " << color1.reflected_red << "\n";
 		}
 		sleep(3);
 	}
