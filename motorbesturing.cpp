@@ -60,7 +60,7 @@ int main(){
 			links();
 		}
 		else if(input == 3){
-			rechts()
+			rechts();
 		}
 		else if(input == 4){
 			stop();
