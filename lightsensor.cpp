@@ -24,7 +24,7 @@ int main(){
 	while(true){
 		error = 0;
 		if(BP.get_sensor(PORT_3, light3) == 0){
-			cout << "lichtreflectie: "<< setw(4) << light3.reflected <<  "\n";
+			cout << "lichtreflectie: " << light3.reflected <<  "\n";
 		}
 		sleep(3);
 	}
