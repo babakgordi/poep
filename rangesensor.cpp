@@ -30,6 +30,7 @@ int main(){
 		error = 0;
 		if(BP.get_sensor(PORT_2, Ultrasonic2) == 0){
 			cout << "Afstand met object: " << Ultrasonic2.cm << "cm" << "\n";
+		}
 	}
 }
 
