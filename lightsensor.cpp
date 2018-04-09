@@ -24,8 +24,9 @@ int main(){
 	while(true){
 		error = 0;
 		if(BP.get_sensor(PORT_3, light3) == 0){
-			cout << "lichtreflectie: " << light3.reflected <<  "\n";
-			cout << "ambient: " << light3.ambient << "\n";
+			cout << "lichtreflectie: " << light3.reflected_red <<  "\n";
+			//zwart is over 2000? (2517, 2544, 2109)
+			// wit is onder 2000? (1696, 1653, 1694, 1638, 1744)
 		}
 		sleep(3);
 	}
