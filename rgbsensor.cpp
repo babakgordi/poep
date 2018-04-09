@@ -23,10 +23,11 @@ int main(){
 	
 	while(true){
 		error = 0;
-		if(BP.get_sensor(PORT_1, color1) == 0){
-			cout << "kleurwaarde: " << color1.reflected_red << "\n";
+		BP.get_sensor(PORT_1, color1);
+		uint16_t roodwaarde = color1.reflected_red;
+		cout << roodwaarde;
 		}
-		sleep(3);
+		sleep(1);
 	}
 }
 
