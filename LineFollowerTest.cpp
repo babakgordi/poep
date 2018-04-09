@@ -36,8 +36,8 @@ int main(){
     cout << "Houd de sensors voer wit > B >  Enter" << endl;
     cin >> line;
     BP.get_sensor(PORT_1, mycolor);
-    Max = mycolor.reflected_red;
-    cout << "Maxiumum = " << Max << "\n";
+    MAX = mycolor.reflected_red;
+    cout << "Maxiumum = " << MAX << "\n";
     cout << "> C > ENTER HALF" << endl;
     cin >> line;
     
