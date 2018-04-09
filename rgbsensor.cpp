@@ -27,8 +27,7 @@ int main(){
 		uint16_t roodwaarde = color1.reflected_red;
 		cout << roodwaarde;
 		}
-		sleep(1);
-	}
+	sleep(1);
 }
 
 void exit_signal_handler(int signo){
