@@ -5,7 +5,7 @@
 
 using namespace std;
 
-BrickPi3 BrickPi;
+BrickPi3 BP;
 
 void exit_signal_handler(int signo);
 
@@ -36,8 +36,8 @@ int main(){
     cout << "Houd de sensors voer wit > B >  Enter" << endl;
     cin >> line;
     BP.get_sensor(PORT_1, mycolor);
-    Maxiumum = mycolor.reflected_red;
-    cout << "Maxiumum = " << Maxiumum << "\n";
+    Max = mycolor.reflected_red;
+    cout << "Maxiumum = " << Max << "\n";
     cout << "> C > ENTER HALF" << endl;
     cin >> line;
     
