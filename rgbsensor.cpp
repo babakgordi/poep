@@ -18,16 +18,16 @@ int main(){
 	
 	int error;
 	
-	BP.set_sensor_type(PORT_1, SENSOR_TYPE_NXT_COLOR_FULL);
+	BP.set_sensor_type(PORT_1, SENSOR_TYPE_NXT_COLOR_RED);
 	sensor_color_t color1;
 	
-	while(true){
+	while(1){
 		error = 0;
 		BP.get_sensor(PORT_1, color1);
 		uint16_t roodwaarde = color1.reflected_red;
 		cout << roodwaarde;
+		sleep(1);
 		}
-	sleep(1);
 }
 
 void exit_signal_handler(int signo){
